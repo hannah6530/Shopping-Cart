@@ -1,5 +1,6 @@
 import React from 'react';
 import Shirt from './Shirt';
+import { Card } from 'semantic-ui-react'
 
 
 class ShirtContainer extends React.Component{
@@ -12,9 +13,9 @@ class ShirtContainer extends React.Component{
     })
 
     return(
-      <div>
+    <Card.Group itemsPerRow={1}>
       {listShirts}
-      </div>
+      </Card.Group>
     )
   }
 

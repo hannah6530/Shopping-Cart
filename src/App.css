@@ -6,8 +6,3 @@ span{
   text-align: center;
   font-size: 15px;
 }
-.gridLayout{
-  display: grid;
-   grid-template-columns: 160px 160px 160px 160px 160px 160px;
-   grid-gap: 60px;
-}
