@@ -1,8 +1,33 @@
-span{
+.bold{
+  font-weight: bold;
+  font-size: 16px;
+}
+.shirtTitle:hover {
+text-decoration: underline;
+text-decoration-color: red;
+
+}
+.Button{
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
   display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
 }
 
-.shirtTitle{
-  text-align: center;
-  font-size: 15px;
+.Button:hover{
+  background-color: gold;
+
+}
+.mt-1 {
+  margin-top: 0.25rem !important;
+
+}
+#border{
+
+
 }

@@ -6,7 +6,8 @@ import ShirtContainer from './ShirtContainer';
 class App extends React.Component {
 
   state = {
-    shirts: shirtData
+    shirts: shirtData,
+    shoppingCart: []
   }
 
 
@@ -22,3 +23,7 @@ class App extends React.Component {
 }
 
 export default App;
+
+
+
+// itemsPerRow={4}

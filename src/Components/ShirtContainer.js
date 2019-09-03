@@ -13,7 +13,7 @@ class ShirtContainer extends React.Component{
     })
 
     return(
-    <Card.Group itemsPerRow={1}>
+    <Card.Group>
       {listShirts}
       </Card.Group>
     )

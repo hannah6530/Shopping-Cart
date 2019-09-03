@@ -7,19 +7,31 @@ const Shirt = (props) => {
     let format = props.name.toLowerCase().split(' ').join('_')
     return require(`../shirt-pics/${format}.jpg`)
 }
+const styles ={
+  mainContainer: {
+        flexWrap: 'wrap',
+        flexDirection: 'row'
+  }
+}
 
   return(
-    <div className="gridLayout">
-      <Card>
+
+      <Card style={styles.mainContainer} className="mt-1" id="border">
         <Image src = {formatURL()} />
 
-        <Card.Content>
-            <span className="shirtTitle">{props.name}</span>
-          </Card.Content>
+        <Card.Content textAlign={'center'}>
+          <span className="shirtTitle">{props.name}</span>
+            <br/>
+            <br/>
+          <span className="bold">${props.price}</span>
+            <br/>
+            <br/>
+          <button className="Button">Add To Cart</button>
+        </Card.Content>
 
 
       </Card>
-    </div>
+
   )
 
 
