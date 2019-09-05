@@ -1,6 +1,7 @@
 import React from 'react';
 import Shirt from './Shirt';
 import { Card } from 'semantic-ui-react'
+import { Grid } from 'semantic-ui-react'
 
 
 class ShirtContainer extends React.Component{
@@ -13,9 +14,9 @@ class ShirtContainer extends React.Component{
     })
 
     return(
-    <Card.Group>
+    <Grid container columns={4}>
       {listShirts}
-      </Card.Group>
+    </Grid>
     )
   }
 

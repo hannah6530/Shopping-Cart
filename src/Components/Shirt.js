@@ -1,5 +1,6 @@
 import React from 'react';
-import { Card, Image } from 'semantic-ui-react';
+// import { Card, Image } from 'semantic-ui-react';
+import { Grid, Image } from 'semantic-ui-react'
 
 const Shirt = (props) => {
 
@@ -7,30 +8,16 @@ const Shirt = (props) => {
     let format = props.name.toLowerCase().split(' ').join('_')
     return require(`../shirt-pics/${format}.jpg`)
 }
-const styles ={
-  mainContainer: {
-        flexWrap: 'wrap',
-        flexDirection: 'row'
-  }
-}
 
   return(
-
-      <Card style={styles.mainContainer} className="mt-1" id="border">
-        <Image src = {formatURL()} />
-
-        <Card.Content textAlign={'center'}>
-          <span className="shirtTitle">{props.name}</span>
-            <br/>
-            <br/>
-          <span className="bold">${props.price}</span>
-            <br/>
-            <br/>
-          <button className="Button">Add To Cart</button>
-        </Card.Content>
-
-
-      </Card>
+    <Grid.Column>
+      <Image src={formatURL()} />
+      <span className="shirtTitle">{props.name}</span>
+       <br/>
+       <span className="bold">${props.price}</span>
+        <br/>
+        <button className="Button">Add To Cart</button>
+    </Grid.Column>
 
   )
 
