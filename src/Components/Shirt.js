@@ -16,6 +16,7 @@ const Shirt = (props) => {
        <br/>
        <span className="bold">${props.price}</span>
         <br/>
+        <br/>
         <button className="Button">Add To Cart</button>
     </Grid.Column>
 
