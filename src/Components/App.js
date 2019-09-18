@@ -16,7 +16,7 @@ class App extends React.Component {
     return (
       <div>
         <div className="fire">
-          <h1 className="Blazing" contentEditable="true">T-Shirt Paluzza</h1>
+          <h1 className="Blazing">T-Shirt Paluzza</h1>
         </div>
 
       <ShirtContainer shirts={this.state.shirts} />
@@ -29,7 +29,3 @@ class App extends React.Component {
 }
 
 export default App;
-
-
-
-// itemsPerRow={4}

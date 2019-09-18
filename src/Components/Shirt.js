@@ -16,6 +16,11 @@ const Shirt = (props) => {
        <br/>
        <span className="bold">${props.price}</span>
         <br/>
+        <a class="ui black circular label">
+        {
+          props.size
+        }
+        </a>
         <br/>
         <button className="Button">Add To Cart</button>
     </Grid.Column>

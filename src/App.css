@@ -113,9 +113,8 @@ body {
 		-2px -5px 5px yellow,
 		4px -10px 10px yellow; }
 }
-i {
-  position: absolute;
-  bottom: 3000px;
-  /* left: 80%; */
-  margin-left: 380px !important;
+.shopping_cart_icon{
+  position: absolute !important;
+  top: 12%;
+  right: 7%;
 }
