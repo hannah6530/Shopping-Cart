@@ -1,19 +1,22 @@
 import React from 'react'
-import { Icon } from 'semantic-ui-react';
+import Shirt from './Shirt';
 
-const ShoppingCart = () => {
+class ShoppingCart extends React.Component {
 
+  render() {
 
-  return(
+    const listShirts = this.props.shirts.map(shirt => {
+      return <Shirt key={shirt.id} {...shirt}/>
+    })
 
-    <Icon.Group size='big' className="shopping_cart_icon">
-      <Icon link name='shopping cart' />
-      <Icon corner='top right'/>
-    </Icon.Group>
-
-
-  )
-
+    return(
+      <div className="ui modal">
+        <div className="content">
+          { listShirts}
+        </div>
+      </div>
+    )
+  }
 
 }
 export default ShoppingCart;

@@ -1,6 +1,5 @@
 import React from 'react';
 import Shirt from './Shirt';
-import { Card } from 'semantic-ui-react'
 import { Grid } from 'semantic-ui-react'
 
 

@@ -3,6 +3,7 @@ import '../App.css';
 import shirtData from '../shirtData';
 import ShirtContainer from './ShirtContainer';
 import ShoppingCart from './ShoppingCart';
+import ShoppingCartIcon from './ShoppingCartIcon';
 
 class App extends React.Component {
 
@@ -20,7 +21,11 @@ class App extends React.Component {
         </div>
 
       <ShirtContainer shirts={this.state.shirts} />
-      <ShoppingCart />
+      <ShoppingCart
+      shoppingCart={this.state.shoppingCart}
+      shirts={this.state.shirts}
+      />
+      <ShoppingCartIcon />
       </div>
     )
 

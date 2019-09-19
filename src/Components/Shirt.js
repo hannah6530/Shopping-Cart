@@ -9,6 +9,7 @@ const Shirt = (props) => {
     return require(`../shirt-pics/${format}.jpg`)
 }
 
+
   return(
     <Grid.Column>
       <Image src={formatURL()} />
@@ -16,12 +17,21 @@ const Shirt = (props) => {
        <br/>
        <span className="bold">${props.price}</span>
         <br/>
-        <a class="ui black circular label">
-        {
-          props.size
-        }
-        </a>
-        <br/>
+
+          <button className="circular ui icon button" id="hover">
+           <p>S</p>
+          </button>
+          <button className="circular ui icon button" id="hover">
+            <p>M</p>
+          </button>
+          <button className="circular ui icon button" id="hover">
+            <p>L</p>
+          </button>
+          <button className="circular ui icon button" id="hover">
+            <p>XL</p>
+          </button>
+          <br/>
+
         <button className="Button">Add To Cart</button>
     </Grid.Column>
 
