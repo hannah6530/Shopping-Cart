@@ -1,15 +1,12 @@
 import React from 'react'
-import { Icon } from 'semantic-ui-react';
+import { Link } from 'react-router-dom'
 
-const ShoppingCartIcon = () => {
-
-
+const ShoppingCartIcon = (props) => {
 
   return(
-    <Icon.Group size='big' className="shopping_cart_icon">
-      <Icon link name='shopping cart'/>
-      <Icon corner='top right'/>
-    </Icon.Group>
+    <div className="cartButton">
+    <Link to="/shopping-cart">Cart ({0})</Link>
+    </div>
   )
 
 

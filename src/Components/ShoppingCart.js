@@ -3,20 +3,20 @@ import Shirt from './Shirt';
 
 class ShoppingCart extends React.Component {
 
-  render() {
+render() {
 
-    const listShirts = this.props.shirts.map(shirt => {
-      return <Shirt key={shirt.id} {...shirt}/>
-    })
+  const listShirts = this.props.shirts.map(shirt => {
+    return <Shirt key={shirt.id} {...shirt}/>
+  })
 
-    return(
-      <div className="ui modal">
-        <div className="content">
-          { listShirts}
-        </div>
+  return(
+    <div className="ui modal">
+      <div className="content">
+        { listShirts}
       </div>
-    )
-  }
+    </div>
+  )
+}
 
 }
 export default ShoppingCart;

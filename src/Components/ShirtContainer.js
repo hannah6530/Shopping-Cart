@@ -5,17 +5,16 @@ import { Grid } from 'semantic-ui-react'
 
 class ShirtContainer extends React.Component{
 
-
   render(){
 
     const listShirts = this.props.shirts.map(shirt => {
-      return <Shirt key={shirt.id} {...shirt}/>
+      return <Shirt key={shirt.id}   handleAdd={this.props.handleAddtoCart} {...shirt}/>
     })
 
     return(
-    <Grid container columns={4}>
-      {listShirts}
-    </Grid>
+        <Grid container columns={4}>
+          {listShirts}
+        </Grid>
     )
   }
 

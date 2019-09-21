@@ -8,7 +8,9 @@ const Shirt = (props) => {
     let format = props.name.toLowerCase().split(' ').join('_')
     return require(`../shirt-pics/${format}.jpg`)
 }
-
+  let handleClick = () => {
+    props.handleAdd(props)
+  }
 
   return(
     <Grid.Column>
@@ -32,9 +34,8 @@ const Shirt = (props) => {
           </button>
           <br/>
 
-        <button className="Button">Add To Cart</button>
+        <button onClick={handleClick} className="Button">Add To Cart</button>
     </Grid.Column>
-
   )
 
 
