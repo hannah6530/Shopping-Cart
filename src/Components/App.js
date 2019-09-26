@@ -23,14 +23,11 @@ class App extends React.Component {
 
   handleAddtoCart = (shirts) => {
     console.log(shirts)
-
   }
-
-
+  
   render(){
     return (
       <div>
-
         <div className="fire">
           <h1 className="Blazing">T-Shirt Paluzza</h1>
         </div>
@@ -38,15 +35,15 @@ class App extends React.Component {
       <ShirtContainer
       shirts={this.state.shirts}
       handleAddtoCart={this.handleAddtoCart}
+      shirtQuantity={this.state.shirtQuantity}
+      handleQuantity={this.handleQuantity}
       />
       <Switch>
         <Route path="/shopping-cart" render={(routerProps) => <ShoppingCart shoppingCart={this.state.shoppingCart} shirts={this.state.shirts} {...routerProps} />} />
       </Switch>
-      
       <ShoppingCartIcon
-      shirts={this.state.shirts}
+      shirtQuantity={this.state.shirtQuantity}
       />
-
       </div>
     )
 

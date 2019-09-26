@@ -12,7 +12,7 @@ render() {
   return(
     <div className="ui modal">
       <div className="content">
-        { listShirts}
+        {listShirts}
       </div>
     </div>
   )

@@ -5,7 +5,7 @@ const ShoppingCartIcon = (props) => {
 
   return(
     <div className="cartButton">
-    <Link to="/shopping-cart">Cart ({0})</Link>
+    <Link to="/shopping-cart">Cart ({props.shirtQuantity})</Link>
     </div>
   )
 

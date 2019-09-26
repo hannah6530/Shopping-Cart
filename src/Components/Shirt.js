@@ -2,41 +2,77 @@ import React from 'react';
 // import { Card, Image } from 'semantic-ui-react';
 import { Grid, Image } from 'semantic-ui-react'
 
-const Shirt = (props) => {
+class Shirt extends React.Component {
 
-  const formatURL = () => {
-    let format = props.name.toLowerCase().split(' ').join('_')
-    return require(`../shirt-pics/${format}.jpg`)
-}
-  let handleClick = () => {
-    props.handleAdd(props)
+  state = {
+    buttonClicked: false,
+    bgColor: ''
   }
 
-  return(
-    <Grid.Column>
-      <Image src={formatURL()} />
-      <span className="shirtTitle">{props.name}</span>
-       <br/>
-       <span className="bold">${props.price}</span>
-        <br/>
+   handleClick = () => {
+     this.props.shirtQuantity(this.props)
 
-          <button className="circular ui icon button" id="hover">
-           <p>S</p>
-          </button>
-          <button className="circular ui icon button" id="hover">
-            <p>M</p>
-          </button>
-          <button className="circular ui icon button" id="hover">
-            <p>L</p>
-          </button>
-          <button className="circular ui icon button" id="hover">
-            <p>XL</p>
-          </button>
+  }
+   handleButton = (event) => {
+     if (this.state.bgColor === ''){
+        this.setState({bgColor: 'darkblue'})
+      }
+      else {
+        this.setState({bgColor: ''})
+      }
+  }
+
+  render(){
+    const formatURL = () => {
+      let format = this.props.name.toLowerCase().split(' ').join('_')
+      return require(`../shirt-pics/${format}.jpg`)
+  }
+
+    return(
+      <Grid.Column>
+        <Image src={formatURL()} />
+        <span className="shirtTitle">{this.props.name}</span>
+         <br/>
+         <span className="bold">${this.props.price}</span>
           <br/>
+              <button onClick={this.handleButton}
+              className="circular ui icon button"
+              id="hover"
+              style={{ backgroundColor: this.state.bgColor }}>
+               <p>S</p>
+              </button>
 
-        <button onClick={handleClick} className="Button">Add To Cart</button>
-    </Grid.Column>
-  )
+              <button onClick={this.handleButton}
+              className="circular ui icon button"
+              id="hover"
+              style={{ backgroundColor: this.state.bgColor }}>
+                <p>M</p>
+              </button>
+
+              <button onClick={this.handleButton}
+              className="circular ui icon button"
+              id="hover"
+              style={{ backgroundColor: this.state.bgColor }}>
+                <p>L</p>
+              </button>
+
+              <button
+              onClick={this.handleButton}
+              className="circular ui icon button" id="hover"
+              style={{ backgroundColor: this.state.bgColor }}>
+                <p>XL</p>
+              </button>
+              <br/>
+
+          <button onClick={this.handleClick} className="Button">Add To Cart</button>
+      </Grid.Column>
+    )
+
+
+  }
+
+
+
 
 
 }
