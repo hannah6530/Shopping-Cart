@@ -22,16 +22,18 @@ class App extends React.Component {
   }
 
   handleAddtoCart = (shirts) => {
-    console.log(shirts)
+    this.setState({
+      shoppingCart: [...this.state.shoppingCart, shirts]
+    })
+    console.log(this.state.shoppingCart)
   }
-  
+
   render(){
     return (
       <div>
         <div className="fire">
           <h1 className="Blazing">T-Shirt Paluzza</h1>
         </div>
-
       <ShirtContainer
       shirts={this.state.shirts}
       handleAddtoCart={this.handleAddtoCart}

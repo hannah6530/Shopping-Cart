@@ -4,7 +4,7 @@ const shirts = [
   size: ['s', 'm', 'l', 'xl'],
   gender: 'male',
   price: '25.25',
-  quantity: '0'
+  quantity: 0
 
 },
 {
@@ -12,14 +12,14 @@ const shirts = [
   size: ['s', 'm', 'l', 'xl'],
   gender: 'female',
   price: '32.75',
-  quantity: '0'
+  quantity: 0
 },
 {
   name: 'Byb Tee',
   size: ['s', 'm', 'l', 'xl'],
   gender: 'female',
   price: '15.80',
-  quantity: '0'
+  quantity: 0
 
 },
 {

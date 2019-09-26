@@ -8,7 +8,7 @@ class ShirtContainer extends React.Component{
   render(){
 
     const listShirts = this.props.shirts.map(shirt => {
-      return <Shirt key={shirt.id}   shirtQuantity={this.props.handleQuantity} handleAdd={this.props.handleAddtoCart} {...shirt}/>
+      return <Shirt key={shirt.id} shirtQuantity={this.props.handleQuantity} handleAdd={this.props.handleAddtoCart} {...shirt}/>
     })
 
     return(

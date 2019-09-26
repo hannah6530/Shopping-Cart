@@ -11,8 +11,9 @@ class Shirt extends React.Component {
 
    handleClick = () => {
      this.props.shirtQuantity(this.props)
-
+     this.props.handleAdd(this.props)
   }
+  
    handleButton = (event) => {
      if (this.state.bgColor === ''){
         this.setState({bgColor: 'darkblue'})
@@ -63,7 +64,6 @@ class Shirt extends React.Component {
                 <p>XL</p>
               </button>
               <br/>
-
           <button onClick={this.handleClick} className="Button">Add To Cart</button>
       </Grid.Column>
     )
