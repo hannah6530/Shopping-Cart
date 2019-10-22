@@ -10,14 +10,14 @@ const shirts = [
 {
   name: 'Born Fly Tee',
   size: ['s', 'm', 'l', 'xl'],
-  gender: 'female',
+  gender: 'male',
   price: '32.75',
   quantity: 0
 },
 {
   name: 'Byb Tee',
   size: ['s', 'm', 'l', 'xl'],
-  gender: 'female',
+  gender: 'male',
   price: '15.80',
   quantity: 0
 
@@ -25,7 +25,7 @@ const shirts = [
 {
   name: 'Champion Crop Tee',
   size: ['s', 'm', 'l', 'xl'],
-  gender: 'female',
+  gender: 'male',
   price: '10.00',
   quantity: 0
 
@@ -49,7 +49,7 @@ const shirts = [
 {
   name: 'Drip Too Hard Tee',
   size: ['s', 'm', 'l', 'xl'],
-  gender: 'female',
+  gender: 'male',
   price: '20.50',
   quantity: 0
 

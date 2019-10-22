@@ -3,8 +3,8 @@ import '../App.css';
 import shirtData from '../shirtData';
 import ShirtContainer from './ShirtContainer';
 import ShoppingCart from './ShoppingCart';
-import ShoppingCartIcon from './ShoppingCartIcon';
 import { Switch, Route } from 'react-router-dom'
+
 
 
 class App extends React.Component {
@@ -25,7 +25,14 @@ class App extends React.Component {
     this.setState({
       shoppingCart: [...this.state.shoppingCart, shirts]
     })
-    console.log(this.state.shoppingCart)
+    // console.log(this.state.shoppingCart)
+  }
+
+  showShoppingCart = () => {
+    this.setState({
+      visible: true
+    })
+
   }
 
   render(){
@@ -34,17 +41,18 @@ class App extends React.Component {
         <div className="fire">
           <h1 className="Blazing">T-Shirt Paluzza</h1>
         </div>
+        <div className="cartButton">
+        <a href="#">Cart ({this.state.shirtQuantity})</a>
+        </div>
       <ShirtContainer
-      shirts={this.state.shirts}
-      handleAddtoCart={this.handleAddtoCart}
-      shirtQuantity={this.state.shirtQuantity}
-      handleQuantity={this.handleQuantity}
+        shirts={this.state.shirts}
+        handleAddtoCart={this.handleAddtoCart}
+        shirtQuantity={this.state.shirtQuantity}
+        handleQuantity={this.handleQuantity}
       />
-      <Switch>
-        <Route path="/shopping-cart" render={(routerProps) => <ShoppingCart shoppingCart={this.state.shoppingCart} shirts={this.state.shirts} {...routerProps} />} />
-      </Switch>
-      <ShoppingCartIcon
-      shirtQuantity={this.state.shirtQuantity}
+      <ShoppingCart
+        shoppingCart={this.state.shoppingCart}
+        shirts={this.state.shirts}
       />
       </div>
     )

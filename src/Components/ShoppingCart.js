@@ -5,15 +5,13 @@ class ShoppingCart extends React.Component {
 
 render() {
 
-  const listShirts = this.props.shirts.map(shirt => {
+  const listShirts = this.props.shoppingCart.map(shirt => {
     return <Shirt key={shirt.id} {...shirt}/>
   })
 
   return(
-    <div className="ui modal">
-      <div className="content">
-        {listShirts}
-      </div>
+    <div className="cartContainer">
+      {listShirts}
     </div>
   )
 }
