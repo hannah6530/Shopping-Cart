@@ -10,7 +10,7 @@ render() {
   })
 
   return(
-    <div className="cartContainer">
+    <div>
       {listShirts}
     </div>
   )
