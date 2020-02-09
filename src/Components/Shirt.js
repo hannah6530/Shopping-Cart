@@ -64,7 +64,7 @@ class Shirt extends React.Component {
                 <p>XL</p>
               </button>
               <br/>
-          <button onClick={this.props.onIncrementShirtCounter} className="Button">Add To Cart</button>
+          <button onClick={this.handleClick} className="Button">Add To Cart</button>
       </Grid.Column>
     )
 
